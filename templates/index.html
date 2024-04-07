@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>SSR Financial Tracker</h1>
+
+    <h2>Add Transaction</h2>
+    <form action="/add_transaction" method="POST">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            {% for category in categories %}
+                <option value="{{ category.name }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+        <label for="transaction_type">Type:</label>
+        <select id="transaction_type" name="transaction_type">
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <h2>Transactions</h2>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.category }}</td>
+                <td>{{ transaction.description }}</td>
+                <td>{{ transaction.__class__.__name__ }}</td>
+                <td>
+                    <a href="/edit_transaction/{{ loop.index0 }}">Edit</a>
+                    <a href="/delete_transaction/{{ loop.index0 }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

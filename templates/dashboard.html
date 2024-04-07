@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Dashboard</h1>
+    <!-- Container for the Bar graph -->
+    <div id="bar-plotly-graph"></div>
+
+    <!-- Container for the Pie chart -->
+    <div id="pie-plotly-graph"></div>
+
+    <script>
+        // Parse and render the Bar graph
+        var barGraphJSON = {{ bar_graphJSON|safe }};
+        Plotly.newPlot('bar-plotly-graph', barGraphJSON.data, barGraphJSON.layout);
+
+        // Parse and render the Pie chart
+        var pieGraphJSON = {{ pie_graphJSON|safe }};
+        Plotly.newPlot('pie-plotly-graph', pieGraphJSON.data, pieGraphJSON.layout);
+    </script>
+
+{% endblock %}
