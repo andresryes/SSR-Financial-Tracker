@@ -30,3 +30,4 @@ This Flask application is a simple server-side rendered (SSR) financial tracker 
 - Flask: Flask is a micro web framework for building web applications in Python.
 - Jinja2: Jinja2 is a template engine for Python, which allows embedding Python code within HTML templates.
 - Plotly: Plotly is a graphing library for creating interactive, publication-quality graphs online.
+- Bootstrap: Bootstrap is a front-end framework for building responsive web designs. CSS
