@@ -1,101 +1,101 @@
 Amount,Category,Description
--259.0,Other,Gas
--91.0,Transport,Bus fare
--177.0,Transport,Unexpected expense
-499.0,Salary,Sports event
--30.0,Utilities,Electricity
--372.0,Transport,Concerts
--296.0,Rent,Groceries
--214.0,Rent,Gas
--386.0,Other,Taxi
--451.0,Food,Museum tickets
--13.0,Food,Subway ticket
-74.0,Salary,Concerts
--437.0,Utilities,Electricity
--28.0,Utilities,Monthly rent
--15.0,Transport,Restaurant
-331.0,Salary,Miscellaneous
--348.0,Other,Groceries
--1.0,Rent,Sports event
--77.0,Transport,Monthly rent
--47.0,Transport,Monthly rent
--323.0,Other,Gifts
--188.0,Entertainment,Snacks
--165.0,Food,Monthly salary
--444.0,Other,Concerts
--443.0,Utilities,Sports event
--144.0,Other,Concerts
--51.0,Food,Monthly rent
-410.0,Salary,Freelance
--359.0,Other,Monthly rent
--83.0,Rent,Concerts
--72.0,Utilities,Movies
-28.0,Salary,Snacks
--28.0,Other,Bonus
--47.0,Utilities,Museum tickets
--450.0,Other,Museum tickets
--388.0,Entertainment,Bonus
-173.0,Salary,Unexpected expense
--235.0,Transport,Bus fare
--288.0,Other,Concerts
--58.0,Other,Monthly salary
--342.0,Utilities,Electricity
--443.0,Transport,Subway ticket
--157.0,Rent,Museum tickets
--221.0,Other,Movies
--43.0,Utilities,Groceries
--191.0,Food,Internet
--19.0,Rent,Gifts
-330.0,Salary,Electricity
--18.0,Other,Charity
-9.0,Salary,Gas
--298.0,Entertainment,Concerts
-465.0,Salary,Groceries
--16.0,Food,Coffee
--103.0,Rent,Monthly rent
--224.0,Entertainment,Electricity
--53.0,Other,Monthly rent
-31.0,Salary,Monthly rent
--80.0,Utilities,Snacks
--43.0,Entertainment,Concerts
--127.0,Rent,Freelance
--273.0,Rent,Bus fare
--460.0,Entertainment,Restaurant
--205.0,Rent,Water
--481.0,Rent,Monthly salary
--69.0,Rent,Monthly rent
--348.0,Rent,Museum tickets
--5.0,Other,Miscellaneous
-97.0,Salary,Electricity
--156.0,Other,Gas
--192.0,Other,Snacks
--287.0,Rent,Snacks
--454.0,Rent,Taxi
--268.0,Transport,Movies
--101.0,Other,Concerts
-283.0,Salary,Internet
--412.0,Entertainment,Bonus
--270.0,Rent,Groceries
--455.0,Transport,Concerts
--283.0,Utilities,Unexpected expense
--77.0,Entertainment,Freelance
--30.0,Entertainment,Snacks
-277.0,Salary,Sports event
--2.0,Rent,Bus fare
-474.0,Salary,Concerts
--23.0,Transport,Unexpected expense
-494.0,Salary,Gas
--48.0,Rent,Concerts
--109.0,Food,Monthly rent
--462.0,Other,Restaurant
--311.0,Food,Monthly rent
--59.0,Utilities,Gas
--42.0,Entertainment,Subway ticket
-64.0,Salary,Bus fare
--14.0,Rent,Monthly rent
--57.0,Utilities,Internet
--89.0,Other,Monthly rent
--207.0,Entertainment,Monthly salary
--20.0,Transport,Subway ticket
-400.0,Salary,Salario
--600.0,Utilities,Gasto
+459,Salary,Monthly rent
+-92,Other,Charity
+-259,Transport,Monthly salary
+91,Salary,Gas bill
+-177,Other,Water
+-499,Utilities,Monthly rent
+30,Salary,Bonus
+-372,Other,Unexpected expense
+-296,Rent,Movies
+-214,Food,Monthly rent
+-386,Utilities,Water
+-451,Rent,Water
+13,Salary,Restaurant
+74,Salary,Monthly rent
+-437,Other,Miscellaneous
+-28,Utilities,Monthly rent
+-15,Entertainment,Gas
+331,Salary,Taxi
+-348,Utilities,Monthly salary
+1,Salary,Internet
+77,Salary,Groceries
+-47,Rent,Monthly rent
+-323,Food,Water
+-188,Entertainment,Monthly salary
+-165,Rent,Unexpected expense
+-444,Entertainment,Charity
+-443,Rent,Restaurant
+-144,Rent,Monthly rent
+-51,Other,Groceries
+-410,Food,Groceries
+-359,Rent,Water
+-83,Transport,Monthly rent
+-72,Entertainment,Subway ticket
+-28,Food,Restaurant
+-28,Utilities,Bus fare
+-47,Entertainment,Monthly rent
+450,Salary,Electricity
+-388,Food,Charity
+-173,Food,Monthly rent
+-235,Utilities,Water
+-288,Utilities,Miscellaneous
+-58,Other,Movies
+-342,Other,Charity
+-443,Utilities,Gas
+-157,Food,Monthly salary
+-221,Entertainment,Taxi
+-43,Transport,Electricity
+191,Salary,Groceries
+-19,Transport,Miscellaneous
+330,Salary,Groceries
+-18,Transport,Snacks
+9,Salary,Sports event
+-298,Other,Subway ticket
+-465,Rent,Movies
+-16,Utilities,Gas
+103,Salary,Bonus
+-224,Utilities,Bus fare
+-53,Entertainment,Gas bill
+-31,Food,Water
+80,Salary,Restaurant
+-43,Entertainment,Bonus
+-127,Rent,Snacks
+-273,Other,Sports event
+460,Salary,Sports event
+205,Salary,Monthly salary
+481,Salary,Internet
+-69,Transport,Bus fare
+-348,Other,Internet
+-5,Utilities,Gas bill
+-97,Rent,Museum tickets
+-156,Rent,Internet
+192,Salary,Monthly salary
+-287,Food,Concerts
+-454,Rent,Gifts
+-268,Food,Bus fare
+-101,Rent,Monthly salary
+-283,Other,Bonus
+-412,Food,Museum tickets
+270,Salary,Monthly rent
+-455,Other,Bonus
+-283,Utilities,Internet
+-77,Other,Charity
+-30,Food,Museum tickets
+-277,Rent,Museum tickets
+-2,Food,Freelance
+-474,Rent,Unexpected expense
+-23,Transport,Charity
+-494,Rent,Internet
+-48,Entertainment,Monthly rent
+-109,Rent,Monthly rent
+-462,Other,Monthly rent
+-311,Entertainment,Snacks
+-59,Transport,Bus fare
+-42,Transport,Monthly rent
+-64,Transport,Movies
+-14,Rent,Water
+-57,Entertainment,Bus fare
+-89,Rent,Water
+-207,Rent,Gas bill
+-20,Entertainment,Freelance
