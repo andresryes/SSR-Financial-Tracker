@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 import plotly.graph_objs as go
 from collections import defaultdict
+import pandas as pd
+import csv
 
 app = Flask(__name__)
 
@@ -22,11 +24,38 @@ class Expense(Transaction):
 
 # Sample data
 categories = [Category("Food"), Category("Transport"), Category("Utilities"), Category("Rent"), Category("Entertainment"), Category("Salary"), Category("Other")]
-transactions = [
-    Expense(10, "Food", "Groceries"),
-    Expense(5, "Transport", "Bus fare"),
-    Income(100, "Salary", "Monthly salary")
-]
+
+# Load transactions from CSV
+def load_transactions():
+    transactions = []
+    df = pd.read_csv('data/financial_data.csv')
+    for index, row in df.iterrows():
+        if row['Amount'] >= 0:
+            transaction = Income(row['Amount'], row['Category'], row['Description'])
+        else:
+            transaction = Expense(-row['Amount'], row['Category'], row['Description'])
+        transactions.append(transaction)
+    return transactions
+
+transactions = load_transactions()
+
+def dump_transactions(filename='data/financial_data.csv'):
+    # Define the CSV file headers
+    headers = ['Amount', 'Category', 'Description']
+    
+    # Open the file in write mode
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)  # Write the headers
+        
+        # Iterate over transactions and write each one to the file
+        for transaction in transactions:
+            # Prepare the row data depending on the type of transaction
+            if isinstance(transaction, Income):
+                row = [transaction.amount, transaction.category, transaction.description]
+            else:
+                row = [-transaction.amount, transaction.category, transaction.description]
+            writer.writerow(row)
 
 # Routes
 @app.route('/')
@@ -47,6 +76,7 @@ def add_transaction():
             transaction = Expense(amount, category, description)
         
         transactions.append(transaction)
+        dump_transactions()  # Update CSV after adding a transaction
         return redirect(url_for('index'))
     return render_template('add_transaction.html', categories=categories)
 
@@ -66,7 +96,7 @@ def edit_transaction(transaction_id):
             transactions[transaction_id] = Income(amount, category, description)
         else:
             transactions[transaction_id] = Expense(amount, category, description)
-        
+        dump_transactions()  # Update CSV after adding a transaction
         return redirect(url_for('view_transactions'))
     transaction = transactions[transaction_id]
     return render_template('edit_transaction.html', transaction=transaction, categories=categories, transaction_id=transaction_id)
@@ -74,6 +104,7 @@ def edit_transaction(transaction_id):
 @app.route('/delete_transaction/<int:transaction_id>')
 def delete_transaction(transaction_id):
     del transactions[transaction_id]
+    dump_transactions()  # Update CSV after adding a transaction
     return redirect(url_for('view_transactions'))
 
 @app.route('/dashboard')
@@ -127,6 +158,13 @@ def dashboard():
     # Rendering dashboard template with both graphs JSON
     return render_template('dashboard.html', bar_graphJSON=bar_graphJSON, pie_graphJSON=pie_graphJSON)
 
+@app.route('/dump_transactions')
+def dump_transactions_route():
+    try:
+        dump_transactions()  # Call the dump function
+        return "Transactions successfully saved to CSV.", 200
+    except Exception as e:
+        return str(e), 500
 
 
 if __name__ == '__main__':
